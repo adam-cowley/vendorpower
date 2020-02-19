@@ -9,7 +9,11 @@
   },
   "dependencies": {
     "core-js": "^3.4.4",
-    "vue": "^2.6.10"
+    "neo4j-driver": "^4.0.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-vue": "^0.8.1",
+    "vue": "^2.6.10",
+    "vue-neo4j": "^0.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",

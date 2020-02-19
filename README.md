@@ -1,24 +1,11 @@
-# vendorpower
+# Vendor Power
 
-## Project setup
+This project accompanies the blog post [Building a Multi-tenant SaaS Control Panel for Neo4j Desktop
+](https://adamcowley.co.uk/neo4j/sass-control-panel-graph-app/) on [adamcowley.co.uk]
+
+
+## Running the project
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

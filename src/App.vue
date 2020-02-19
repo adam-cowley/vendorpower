@@ -1,28 +1,36 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="ui container">
+    <vue-neo4j-connect
+      v-if="!driver"
+      :onConnect="onConnect"
+      :showActive="true"
+    />
+    <div v-else>
+      <h1 is="sui-header">VendorPower</h1>
+      <CreateCustomer />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CreateCustomer from './components/CreateCustomer'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
-  }
+    CreateCustomer,
+  },
+  data: () => ({ driver: false, }),
+  methods: {
+    onConnect(driver) {
+      this.driver = driver
+    },
+  },
 }
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 24px 0;
 }
 </style>
